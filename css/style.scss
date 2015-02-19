@@ -1,0 +1,17 @@
+/**
+  * @name: Presskode Components
+  * @description: a better starting point for any website. Built in SCSS and from Meyerweb's reset.css 2.0
+  * @author: @presskode
+  * @purpose: to create a good looking starting point for modern websites 
+    and "pre-style" a LOT of components that make up said website
+**/
+
+@import '../partials/reset';
+@import '../partials/typography';
+@import '../partials/images';
+@import '../partials/elements';
+@import '../partials/tables';
+
+@import '../plugins/slicknav/slicknav';
+
+@import 'theme';

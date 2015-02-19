@@ -1,0 +1,210 @@
+/**
+  * @name: Presskode Components / typography
+  * @description: some minor html element styling for optimal legibility of your typography
+  * @author: @presskode
+  * @purpose: to create beautiful typography styling without overdoing anything.
+**/
+
+// -----------------------------------------
+// 1.0 SCSS variables to make your life easier
+// -----------------------------------------
+
+// default font sizes and families
+$font-family:           'Lato', sans-serif;
+$font-size:             16px;
+$heading-font-size:     30px;
+$small-font-size:       $font-size * 0.75; // 16px * 0.75 = 12px
+$big-font-size:         $font-size * 1.5; // 16px * 1.5 = 24px
+$code-font-family:      'Ubuntu Mono', monospace;
+$code-font-size:        $font-size;
+
+// default colors
+$text-color:            #181818;
+$link-color:            #439fe0;
+$link-hover-color:      #005580;
+$link-active-color:     $link-color;
+$mono-color:            #ccc;
+$code-color:            #c7254e;
+$code-background-color: #f9f2f4;
+$disabled-color:        #666;
+
+// default paddings, margins and line-heights
+$text-margin-bottom:    1rem;
+$heading-margin-bottom: 1rem;
+$heading-margin-top:    2rem;
+$line-height:           1.45;
+$heading-line-height:   18px;
+
+
+// -----------------------------------------
+// 2.0 general html elements styling
+// -----------------------------------------
+html, body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+
+// 2.1 headings (titles)
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: $heading-margin-bottom;
+  line-height: $heading-line-height;
+}
+h1 {font-size: $heading-font-size;}
+h2 {font-size: $heading-font-size * 0.9;} // 30 * 0.9 = 27px
+h3 {font-size: $heading-font-size * 0.85;} // 30 * 0.85 = 25.5px
+h4 {font-size: $heading-font-size * 0.8;} // 30 * 0.8 = 24px
+h5 {font-size: $heading-font-size * 0.75;} // 30 * 0.75 = 22.5px
+h6 {font-size: $heading-font-size * 0.7;} // 30 * 0.7 = 21px
+* + h2,* + h3,* + h4,* + h5,* + h6 {margin-top: $heading-margin-top;}
+h1.page-title {
+  font-size: $heading-font-size * 1.5; 
+  margin-bottom: $heading-margin-bottom;
+}
+
+
+// 2.2 paragraphs
+p {margin-bottom: $text-margin-bottom;}
+
+
+// 2.3 lists
+ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  ul {
+    list-style-type: circle;
+    margin-left: 1rem;
+    ul {
+      list-style-type: disc;
+      ul {
+        list-style-type: circle;
+      }
+    }
+  }
+}
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  ol {
+    margin-left: 1rem;
+    ol {
+      margin-left: 1rem;
+      ol {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+dl {
+  dd {margin: 0 0 1rem 1rem;}
+}
+
+
+// 2.4 links
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+a, a:link, a:visited {color: $link-color;}
+a:hover, a:active {
+  color: $link-active-color;
+  outline: 0;
+}
+a:hover, a:focus {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+a:visited {color: darken($link-color, 20);}
+
+
+// 2.5 blockquotes
+blockquote {
+  padding: 1rem;
+  margin: 0 0 1rem;
+  font-size: $font-size * 1.1;
+  border-left: 5px solid $disabled-color;
+  font-style: italic;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {margin-bottom: 0;}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: $mono-color;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {content: '\2014 \00A0';}
+blockquote em,
+blockquote i,
+blockquote cite, cite {font-style: normal;}
+
+
+// 2.6 misc html elements
+em, i {font-style: italic;}
+strong, b {font-weight: bold;}
+small {font-size: $small-font-size;}
+var {@extend code;}
+abbr {border-bottom: 1px dotted $mono-color; cursor: help;}
+pre {
+  max-width: 100%;
+  overflow: auto;
+  font-family: $code-font-family;
+  display: block;
+  padding: 1em;
+  margin: 0 0 10px;
+  font-size: $code-font-size;
+  line-height: 1.42857143;
+  color: $code-color;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: $code-background-color;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+code {
+  font-family: $code-font-family;
+  color: $code-color;
+  background: $code-background-color;
+  display: inline-block;
+  padding: 0px 5px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          border: 0;
+          border-top: 1px solid $mono-color;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {top: -.5em;}
+sub {bottom: -.25em;}

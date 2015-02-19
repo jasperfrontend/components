@@ -1,0 +1,455 @@
+/**
+  * @name: Presskode Components
+  * @description: a better starting point for any website. Built in SCSS and from Meyerweb's reset.css 2.0
+  * @author: @presskode
+  * @purpose: to create a good looking starting point for modern websites 
+    and "pre-style" a LOT of components that make up said website
+**/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, var, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+  * @name: Presskode Components / typography
+  * @description: some minor html element styling for optimal legibility of your typography
+  * @author: @presskode
+  * @purpose: to create beautiful typography styling without overdoing anything.
+**/
+html, body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.45; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 18px; }
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 27px; }
+
+h3 {
+  font-size: 25.5px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 22.5px; }
+
+h6 {
+  font-size: 21px; }
+
+* + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: 2rem; }
+
+h1.page-title {
+  font-size: 45px;
+  margin-bottom: 1rem; }
+
+p {
+  margin-bottom: 1rem; }
+
+ul {
+  list-style-type: disc;
+  margin-left: 1rem; }
+  ul ul {
+    list-style-type: circle;
+    margin-left: 1rem; }
+    ul ul ul {
+      list-style-type: disc; }
+      ul ul ul ul {
+        list-style-type: circle; }
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside; }
+  ol ol {
+    margin-left: 1rem; }
+    ol ol ol {
+      margin-left: 1rem; }
+      ol ol ol ol {
+        margin-left: 1rem; }
+
+dl dd {
+  margin: 0 0 1rem 1rem; }
+
+a {
+  color: #439fe0;
+  text-decoration: none; }
+
+a, a:link, a:visited {
+  color: #439fe0; }
+
+a:hover, a:active {
+  color: #439fe0;
+  outline: 0; }
+
+a:hover, a:focus {
+  color: #005580;
+  text-decoration: underline; }
+
+a:visited {
+  color: #1b6aa2; }
+
+blockquote {
+  padding: 1rem;
+  margin: 0 0 1rem;
+  font-size: 17.6px;
+  border-left: 5px solid #666;
+  font-style: italic; }
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0; }
+
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #ccc; }
+
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0'; }
+
+blockquote em,
+blockquote i,
+blockquote cite, cite {
+  font-style: normal; }
+
+em, i {
+  font-style: italic; }
+
+strong, b {
+  font-weight: bold; }
+
+small {
+  font-size: 12px; }
+
+abbr {
+  border-bottom: 1px dotted #ccc;
+  cursor: help; }
+
+pre {
+  max-width: 100%;
+  overflow: auto;
+  font-family: "Ubuntu Mono", monospace;
+  display: block;
+  padding: 1em;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #c7254e;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f2f4;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+  pre p:last-child {
+    margin-bottom: 0; }
+
+code, var {
+  font-family: "Ubuntu Mono", monospace;
+  color: #c7254e;
+  background: #f9f2f4;
+  display: inline-block;
+  padding: 0px 5px; }
+
+pre code, pre var {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0; }
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll; }
+
+hr {
+  height: 0;
+  box-sizing: content-box;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid #ccc; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle; }
+
+audio,
+canvas {
+  display: inline-block; }
+
+embed,
+iframe,
+object,
+video {
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  vertical-align: middle; }
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+  margin-bottom: 0; }
+
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.42857143; }
+
+code, var,
+kbd,
+pre,
+samp {
+  font-family: "Ubuntu Mono", monospace; }
+
+code, var {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background: #f9f2f4;
+  border-radius: 4px; }
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: bold;
+  box-shadow: none; }
+
+table,
+th,
+td {
+  border: 1px solid #eaeaea;
+  border: 1px solid rgba(51, 51, 51, 0.1); }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 1.6em;
+  table-layout: fixed;
+  width: 100%; }
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left; }
+
+th {
+  border-width: 0 1px 1px 0;
+  font-weight: 700; }
+
+td {
+  border-width: 0 1px 1px 0; }
+
+th, td {
+  padding: 0.4em; }
+
+/*
+    Mobile Menu Core Style
+*/
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer; }
+
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left; }
+
+.slicknav_menu .slicknav_icon {
+  float: left;
+  margin: 0.188em 0 0 0.438em; }
+
+.slicknav_menu .slicknav_no-text {
+  margin: 0; }
+
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em; }
+
+.slicknav_nav {
+  clear: both; }
+
+.slicknav_nav ul,
+.slicknav_nav li {
+  display: block; }
+
+.slicknav_nav .slicknav_arrow {
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em; }
+
+.slicknav_nav .slicknav_item {
+  cursor: pointer; }
+
+.slicknav_nav .slicknav_row {
+  display: block; }
+
+.slicknav_nav a {
+  display: block; }
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+  display: inline; }
+
+.slicknav_menu:before,
+.slicknav_menu:after {
+  content: " ";
+  display: table; }
+
+.slicknav_menu:after {
+  clear: both; }
+
+/* IE6/7 support */
+.slicknav_menu {
+  *zoom: 1; }
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+.slicknav_menu {
+  font-size: 16px; }
+
+/* Button */
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  background-color: #222222; }
+
+/* Button Text */
+.slicknav_menu .slicknav_menutxt {
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000; }
+
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #f5f5f5; }
+
+.slicknav_menu {
+  background: #4c4c4c;
+  padding: 5px; }
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em; }
+
+.slicknav_nav, .slicknav_nav ul {
+  list-style: none;
+  overflow: hidden; }
+
+.slicknav_nav ul {
+  padding: 0;
+  margin: 0 0 0 20px; }
+
+.slicknav_nav .slicknav_row {
+  padding: 5px 10px;
+  margin: 2px 5px; }
+
+.slicknav_nav a {
+  padding: 5px 10px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: #fff; }
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0; }
+
+.slicknav_nav .slicknav_row:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #fff; }
+
+.slicknav_nav a:hover {
+  border-radius: 6px;
+  background: #ccc;
+  color: #222; }
+
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 15px; }
+
+#menu {
+  display: none; }
+
+#website {
+  max-width: 1140px;
+  padding: 0 1rem;
+  margin: 2rem auto; }
