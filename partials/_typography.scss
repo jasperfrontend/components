@@ -15,6 +15,7 @@ $font-size:             16px;
 $heading-font-size:     30px;
 $small-font-size:       $font-size * 0.75; // 16px * 0.75 = 12px
 $big-font-size:         $font-size * 1.5; // 16px * 1.5 = 24px
+$page-title-font-size:  $font-size * 6; // 16px * 6 = 96px
 $code-font-family:      'Ubuntu Mono', monospace;
 $code-font-size:        $font-size;
 
@@ -39,7 +40,8 @@ $heading-line-height:   18px;
 // -----------------------------------------
 // 2.0 general html elements styling
 // -----------------------------------------
-html, body {
+html, 
+body {
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
@@ -47,7 +49,12 @@ html, body {
 
 
 // 2.1 headings (titles)
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: $heading-margin-bottom;
   line-height: $heading-line-height;
 }
@@ -58,9 +65,12 @@ h4 {font-size: $heading-font-size * 0.8;} // 30 * 0.8 = 24px
 h5 {font-size: $heading-font-size * 0.75;} // 30 * 0.75 = 22.5px
 h6 {font-size: $heading-font-size * 0.7;} // 30 * 0.7 = 21px
 * + h2,* + h3,* + h4,* + h5,* + h6 {margin-top: $heading-margin-top;}
+
+// 2.1.1 separate styling for the very first h1 of the page.
 h1.page-title {
-  font-size: $heading-font-size * 1.5; 
-  margin-bottom: $heading-margin-bottom;
+  font-size: $page-title-font-size; 
+  line-height: 1.145;
+  margin: 4rem 0;
 }
 
 
@@ -83,6 +93,7 @@ ul {
     }
   }
 }
+
 ol {
   list-style-type: decimal;
   list-style-position: inside;
@@ -96,6 +107,7 @@ ol {
     }
   }
 }
+
 dl {
   dd {margin: 0 0 1rem 1rem;}
 }
@@ -106,12 +118,16 @@ a {
   color: $link-color;
   text-decoration: none;
 }
-a, a:link, a:visited {color: $link-color;}
-a:hover, a:active {
+a, 
+a:link, 
+a:visited {color: $link-color;}
+a:hover, 
+a:active {
   color: $link-active-color;
   outline: 0;
 }
-a:hover, a:focus {
+a:hover, 
+a:focus {
   color: $link-hover-color;
   text-decoration: underline;
 }
@@ -146,8 +162,10 @@ blockquote cite, cite {font-style: normal;}
 
 
 // 2.6 misc html elements
-em, i {font-style: italic;}
-strong, b {font-weight: bold;}
+em, 
+i {font-style: italic;}
+strong, 
+b {font-weight: bold;}
 small {font-size: $small-font-size;}
 var {@extend code;}
 abbr {border-bottom: 1px dotted $mono-color; cursor: help;}
@@ -191,13 +209,11 @@ pre code {
 }
 hr {
   height: 0;
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          border: 0;
-          border-top: 1px solid $mono-color;
+  box-sizing: content-box;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid $mono-color;
 }
 sub,
 sup {
