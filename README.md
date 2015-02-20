@@ -1,6 +1,7 @@
 # components
 A toss-this-in-and-your-HTML-elements-look-great HTML/SCSS component library
 
+**[http://presskode.github.io/components/](http://presskode.github.io/components/)**
 
 ### SlickNav ###
 
