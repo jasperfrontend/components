@@ -2,42 +2,44 @@
 
 In future updates all these components mentioned below will be added to this repository.
 
-widgets
+### widgets
 
-- latest news
-- latest photos
-- form
+* latest news
+* latest photos
+* form
 
+### media
 
-media
-
-- images
--- with caption
--- with enlargement
-- image overlays
--- overlay corners
--- overlay bottom
--- overlay center
-- embeds
-- galleries
-- sliders
-
-
-page types
-
-- normal page
-- archive page
-- single post
-- gallery
--- gallery effects
+* images
+	* with caption
+	* with enlargement
+* image overlays
+	* overlay corners
+	* overlay bottom
+	* overlay center
+* embeds
+* galleries
+* sliders
 
 
-page elements
+### page types
 
-- headers
-- footers
-- navigations
--- horizontal
---- with submenu
--- vertical
---- with submenu
+* normal page
+* archive page
+* single post
+* gallery
+	* gallery effects
+
+
+### page elements
+
+* headers
+* footers
+* navigations
+	* horizontal
+		* with submenu
+	* vertical
+		* with submenu
+
+
+# "Alia sequentur."
