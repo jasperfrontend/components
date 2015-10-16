@@ -10,5 +10,3 @@ The menu uses [SlickNav by ComputerWolf](https://github.com/ComputerWolf/SlickNa
 ## Notes & Remarks ##
 
 I've never really committed much to GitHub before, so pardon me if things are a bit weird or incomplete. This project is a way for me to teach and learn at the same time so if you have any remarks please submit a pull request with improvements and/or drop a comment or issue.
-
-You can [follow me on twitter](https://twitter.com/presskode).
