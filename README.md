@@ -1,7 +1,7 @@
 # components
 A toss-this-in-and-your-HTML-elements-look-great HTML/SCSS component library
 
-**[http://tweemeterstudio.github.io/components/](http://tweemeterstudio.github.io/components/)**
+**[http://jasperfrontend.github.io/components/](http://jasperfrontend.github.io/components/)**
 
 ### SlickNav ###
 
